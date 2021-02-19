@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnList"
+        android:title="리스트보기"/>
+    <item
+        android:id="@+id/btnWrite"
+        android:title="일기쓰기"/>
+    <item
+        android:id="@+id/btnCalendar"
+        android:title="달력보기"/>
+    <item
+        android:id="@+id/btnChart"
+        android:title="차트"/>
+
+</menu>

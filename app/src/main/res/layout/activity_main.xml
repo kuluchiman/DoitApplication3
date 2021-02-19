@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/background_transparent"
+            android:theme="@style/NavigationTheme"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:theme="@style/NavigationTheme">
+
+                <LinearLayout
+                    android:layout_width="160sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@drawable/gray_button"
+                    android:padding="12sp">
+
+                    <ImageView
+                        android:id="@+id/weatherImageView"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/weather_icon_1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/weatherImageView"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="today"
+                            android:textColor="#777777"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_centerVertical="true"
+                            android:text="02월 10일"
+                            android:textColor="#cc000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_list"
+                    app:rippleColor="@color/black" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="16dp"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/ic_write"
+                    app:layout_anchor="@id/tab1"
+                    app:layout_anchorGravity=""
+                    app:rippleColor="@color/black" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/tab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical|bottom"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_list"
+                    android:visibility="gone"
+                    app:rippleColor="@color/black" />
+            </LinearLayout>
+
+
+        </RelativeLayout>-->
+
+
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/background_transparent"
+            android:theme="@style/NavigationTheme">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:theme="@style/NavigationTheme">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20sp"
+                    android:background="@drawable/gray_button"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="145sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:padding="6sp">
+
+                        <ImageView
+                            android:id="@+id/weatherImageView"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:gravity="center"
+                            android:src="@drawable/weather_icon_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weatherImageView"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="today"
+                                android:textColor="#777777"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/dateToday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Fab, 17/ 2020"
+                                android:textColor="#cc000000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        app:fabSize="mini"
+                        android:layout_marginRight="32px"
+                        android:layout_toLeftOf="@id/fab2"
+                        android:src="@drawable/ic_list"
+                        android:backgroundTint="#cc000000"
+                        />
+
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginRight="20sp"
+                        app:fabSize="mini"
+                        android:src="@drawable/ic_write"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="#cc000000"
+                        />
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/tab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="clip_vertical|bottom"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_list"
+
+                        android:visibility="gone"
+                        app:rippleColor="@color/black" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+        <!--<com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/background_transparent"
+            >
+
+            <Button
+                android:id="@+id/angry_btn"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_shape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+
+
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@drawable/item_color"
+            app:itemTextColor="@drawable/item_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/menu" /> <!-- menu폴더에 menu_bottom.xml파일이랑 연결 -->
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
